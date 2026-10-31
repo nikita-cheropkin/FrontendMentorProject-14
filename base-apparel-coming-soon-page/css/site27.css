@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "JosefinSans";
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url(../Fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "JosefinSansItalic";
+    src: url(../Fonts/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+    --pink-text: hsl(0, 36%, 70%);
+    --error-color: hsl(0, 93%, 68%);
+    --grey-color: hsl(0, 6%, 24%);
+}
+
+body {
+    background-color: #fff7f7;
+}
+
+main {
+    display: flex;
+}
+
+.left {
+    flex: 2;
+    position: relative;
+    padding: 80px 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.left h1 span {
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+
+.left h1 span:first-child {
+    font-weight: 300;
+    letter-spacing: 15px;
+    color: var(--pink-text);
+}
+
+.b {
+    font-weight: 600;
+    letter-spacing: 13px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 450px;
+}
+
+.content > p {
+    color: var(--pink-text);
+    width: 100%;
+    line-height: 35px;
+}
+
+.input-container {
+    border-radius: 50px;
+    border: 1px solid var(--pink-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.input-container button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% + 4px); 
+    align-self: stretch;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    transform: scale(1.1);
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    position: absolute;
+    right: -2px;
+    top: -1px;
+    align-self: stretch;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    border: none;
+    padding: 20px 30px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 50px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: var(--pink-text);
+    font-family: "JosefinSans";
+}
+
+.button-input {
+    position: absolute;
+    right: 0;
+}
+
+.error-text {
+    color: var(--error-color);
+    font-size: 13px;
+    padding: 10px 30px;
+    visibility: hidden;
+}
+
+.errorIcon {
+    visibility: hidden;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .pattern {
+        display: none;
+    }
+
+    .left {
+        padding: 0;
+        display: contents;
+    }
+
+    .right picture {
+        width: 100%;
+        height: 100%;
+    }
+
+    .left header {
+        order: 1;
+        padding: 30px
+    }
+
+    .right {
+        order: 2;
+    }
+
+    .content {
+        order: 3;
+        padding: 60px 30px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .left h1 span {
+        font-size: 2.5rem;
+        letter-spacing: 13px;
+    }
+
+    .right picture,
+    .right img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .input-container button {
+        height: 100%;
+        padding: 15px 30px;
+    }
+
+    .input-container button img {
+        width: 12px;
+    }
+    
+}
