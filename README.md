@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/qr-code-component-7cnGaRvPvR)
-- Live Site URL: [Live Site](https://nikita-cheropkin.github.io/FrontendManorProject-4/qr-code-component/index.html)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-jfPWILMjOk)
+- Live Site URL: [Live Site](https://nikita-cheropkin.github.io/FrontendMentorProject-14/base-apparel-coming-soon-page/site27.html)
 
 ## My process
 
